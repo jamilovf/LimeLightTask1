@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card {
+  width: 400px;
+  height: 320px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.card .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+}
+
+.more {
+  display: none;
+}
+
+.more:checked ~ .content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 15px 50px 30px;
+}
+
+.front .inner,
+.back .inner {
+  height: 100%;
+  padding: 1.5em;
+  -webkit-transform: translateZ(80px) scale(0.94);
+          transform: translateZ(80px) scale(0.94);
+}
+
+.front {
+  background-color: #fff;
+  background-size: cover;
+  background-position: center center;
+}
+
+.front .background {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.front .background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.front:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 15px 50px 30px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: linear-gradient(40deg, rgba(243, 187, 67, 0.7), rgba(252, 166, 255, 0.7));
+}
+
+.front h2 {
+  text-align: center;
+  margin-top: 4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.front .point {
+  text-align: center;
+  color: white;
+}
+
+.front .point:hover {
+  color: yellow;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: #fff;
+  border: 2px solid #f0f0f0;
+}
+
+.back .inner .specs ul li {
+  color: #5c1515;
+  font-weight: 400;
+}
+
+.model,
+.price {
+  font-weight: 600;
+  color: #5c1515;
+  font-size: 0.86em;
+}
+
+.model {
+  display: inline-block;
+}
+
+.price {
+  display: inline-block;
+  float: right;
+}
+
+.button {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0 1.5em;
+  height: 3em;
+  line-height: 2.9em;
+  background-color: transparent;
+  border: solid 2px #fff;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  left: 50%;
+  margin-left: 20%;
+  margin-top: 20%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
+  color: #5c1515;
+}
+
+.button.return {
+  line-height: 3em;
+  color: #5c1515;
+  border-color: #5c1515;
+  margin-left: 0%;
+  margin-top: 0%;
+  position: absolute;
+  bottom: 15%;
+  left: 42%;
+}
+
+.button.return:hover {
+  background-color: #5c1515;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
